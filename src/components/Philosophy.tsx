@@ -1,4 +1,3 @@
-
 const MosaicTile = ({ color, delay = 0 }) => {
   return (
     <div 
@@ -6,7 +5,9 @@ const MosaicTile = ({ color, delay = 0 }) => {
       style={{ 
         animationDelay: `${delay}s`,
         aspectRatio: '1',
-        transition: 'all 0.3s ease-in-out'
+        transition: 'all 0.3s ease-in-out',
+        position: 'relative',
+        zIndex: '1'
       }}
     ></div>
   );
@@ -14,7 +15,7 @@ const MosaicTile = ({ color, delay = 0 }) => {
 
 const Philosophy = () => {
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding mb-32">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -48,50 +49,38 @@ const Philosophy = () => {
             </div>
           </div>
           
-          <div className="relative h-80 md:h-96">
+          <div className="relative h-[32rem] md:h-[36rem] overflow-hidden">
             {/* Visual representation of the mosaic philosophy using a grid of colored squares */}
-            <div className="grid grid-cols-6 gap-2 h-full w-full">
+            <div className="grid grid-cols-5 gap-4 h-full w-full">
               <MosaicTile color="bg-mosaic-primary/20" delay={0} />
               <MosaicTile color="bg-mosaic-secondary/30" delay={0.4} />
               <MosaicTile color="bg-mosaic-tertiary/50" delay={0.8} />
               <MosaicTile color="bg-mosaic-primary/30" delay={1.2} />
               <MosaicTile color="bg-mosaic-secondary/20" delay={1.6} />
-              <MosaicTile color="bg-mosaic-tertiary/40" delay={2.0} />
               
               <MosaicTile color="bg-mosaic-secondary/20" delay={2.2} />
               <MosaicTile color="bg-mosaic-tertiary/30" delay={1.8} />
               <MosaicTile color="bg-mosaic-primary/40" delay={1.4} />
               <MosaicTile color="bg-mosaic-secondary/50" delay={1.0} />
               <MosaicTile color="bg-mosaic-primary/20" delay={0.6} />
-              <MosaicTile color="bg-mosaic-tertiary/30" delay={0.2} />
               
               <MosaicTile color="bg-mosaic-tertiary/40" delay={0.3} />
               <MosaicTile color="bg-mosaic-primary/30" delay={0.7} />
               <MosaicTile color="bg-mosaic-secondary/40" delay={1.1} />
               <MosaicTile color="bg-mosaic-tertiary/20" delay={1.5} />
               <MosaicTile color="bg-mosaic-primary/50" delay={1.9} />
-              <MosaicTile color="bg-mosaic-secondary/30" delay={2.3} />
               
               <MosaicTile color="bg-mosaic-primary/40" delay={2.1} />
               <MosaicTile color="bg-mosaic-secondary/20" delay={1.7} />
               <MosaicTile color="bg-mosaic-tertiary/50" delay={1.3} />
               <MosaicTile color="bg-mosaic-primary/30" delay={0.9} />
               <MosaicTile color="bg-mosaic-secondary/40" delay={0.5} />
-              <MosaicTile color="bg-mosaic-tertiary/20" delay={0.1} />
               
               <MosaicTile color="bg-mosaic-secondary/30" delay={0.2} />
               <MosaicTile color="bg-mosaic-tertiary/40" delay={0.6} />
               <MosaicTile color="bg-mosaic-primary/20" delay={1.0} />
               <MosaicTile color="bg-mosaic-secondary/50" delay={1.4} />
               <MosaicTile color="bg-mosaic-tertiary/30" delay={1.8} />
-              <MosaicTile color="bg-mosaic-primary/40" delay={2.2} />
-              
-              <MosaicTile color="bg-mosaic-tertiary/50" delay={2.0} />
-              <MosaicTile color="bg-mosaic-primary/30" delay={1.6} />
-              <MosaicTile color="bg-mosaic-secondary/40" delay={1.2} />
-              <MosaicTile color="bg-mosaic-tertiary/20" delay={0.8} />
-              <MosaicTile color="bg-mosaic-primary/50" delay={0.4} />
-              <MosaicTile color="bg-mosaic-secondary/30" delay={0} />
             </div>
           </div>
         </div>

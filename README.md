@@ -1,22 +1,16 @@
-# Welcome to your Lovable project
+# Masaic AI Platform Website
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/560b94ed-b035-49fe-b65b-2c32a3bb9022
+This is the official website for the Masaic AI Platform.
 
 ## How can I edit this code?
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/560b94ed-b035-49fe-b65b-2c32a3bb9022) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+There are several ways of editing this application.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+You can work locally using your own IDE by cloning this repo and pushing changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -27,7 +21,7 @@ Follow these steps:
 git clone <YOUR_GIT_URL>
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd masaic-ai-website
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -62,12 +56,10 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/560b94ed-b035-49fe-b65b-2c32a3bb9022) and click on Share -> Publish.
+You can build the project with the following command:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+```
 
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The built files will be in the `dist` directory, which can be deployed to any static hosting service like GitHub Pages, Netlify, Vercel, or any other hosting service of your choice.

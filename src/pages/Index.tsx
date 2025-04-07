@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -6,8 +5,6 @@ import Features from "@/components/Features";
 import Integration from "@/components/Integration";
 import Security from "@/components/Security";
 import Philosophy from "@/components/Philosophy";
-import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,8 +21,6 @@ const Index = () => {
         <Integration />
         <Security />
         <Philosophy />
-        <FAQ />
-        <CTA />
       </main>
       <Footer />
     </div>

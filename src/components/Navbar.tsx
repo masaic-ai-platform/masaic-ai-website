@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -25,10 +24,10 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 bg-black rounded-md flex items-center justify-center">
-              <span className="text-white font-bold">OR</span>
+            <div className="h-8 w-8 bg-gradient-to-br from-mosaic-primary to-mosaic-secondary rounded-md flex items-center justify-center">
+              <span className="text-white font-bold">MA</span>
             </div>
-            <span className="text-xl font-bold">OpenResponses</span>
+            <span className="text-xl font-bold">Masaic AI Platform</span>
           </div>
         </div>
 
@@ -38,8 +37,10 @@ const Navbar = () => {
           <a href="#integration" className="text-sm hover:text-gray-800 transition-colors">Integration</a>
           <a href="#security" className="text-sm hover:text-gray-800 transition-colors">Security</a>
           <a href="#about" className="text-sm hover:text-gray-800 transition-colors">About</a>
-          <a href="#faq" className="text-sm hover:text-gray-800 transition-colors">FAQ</a>
-          <Button className="ml-4 bg-black hover:bg-gray-800 text-white">Get Started</Button>
+          <a href="https://openresponses.masaic.ai/faq" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-gray-800 transition-colors">FAQ</a>
+          <a href="https://openresponses.masaic.ai/" target="_blank" rel="noopener noreferrer" className="ml-4">
+            <Button className="bg-black hover:bg-gray-800 text-white">Get Started</Button>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -85,15 +86,24 @@ const Navbar = () => {
               About
             </a>
             <a 
-              href="#faq" 
+              href="https://openresponses.masaic.ai/faq" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="px-4 py-2 hover:bg-gray-100 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
             </a>
-            <Button className="mt-2 bg-black hover:bg-gray-800 text-white">
-              Get Started
-            </Button>
+            <a 
+              href="https://openresponses.masaic.ai/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Button className="mt-2 bg-black hover:bg-gray-800 text-white">
+                Get Started
+              </Button>
+            </a>
           </nav>
         </div>
       )}

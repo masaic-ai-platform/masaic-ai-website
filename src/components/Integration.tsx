@@ -1,51 +1,42 @@
-
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const codeSnippets = {
-  python: `import openresponses
+  openai_sdk: `openai_client = OpenAI(
+    base_url="http://localhost:8080/v1", 
+    api_key="your_api_key", 
+    default_headers={'x-model-provider': 'openai'}
+)
 
-# Initialize the client
-client = openresponses.Client(api_key="your_api_key")
-
-# Send a request
-response = client.generate(
-    prompt="Summarize this article about AI ethics",
-    context=article_text,
-    options={"max_length": 200}
+response = openai_client.responses.create(
+    model="gpt-4o-mini",
+    input="Tell me a joke"
 )
 
 print(response.text)`,
 
-  javascript: `import { OpenResponsesClient } from '@openresponses/sdk';
+  agent_sdk: `client = AsyncOpenAI(
+    base_url="http://localhost:8080/v1", 
+    api_key="your_api_key", 
+    default_headers={'x-model-provider': 'openai'}
+)
 
-// Initialize the client
-const client = new OpenResponsesClient({
-  apiKey: 'your_api_key'
-});
+agent = Agent(
+    name="Assistant",
+    instructions="You are a humorous poet who can write funny poems of 4 lines.",
+    model=OpenAIResponsesModel(model="gpt-4o-mini", openai_client=client)
+)
 
-// Send a request
-async function generateResponse() {
-  const response = await client.generate({
-    prompt: 'Summarize this article about AI ethics',
-    context: articleText,
-    options: { maxLength: 200 }
-  });
-  
-  console.log(response.text);
-}
+response = await agent.run("Write a poem about coding")
+print(response)`,
 
-generateResponse();`,
-
-  curl: `curl -X POST https://your-openresponses-instance/api/v1/generate \\
+  curl: `curl -X POST http://localhost:8080/v1/responses \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer your_api_key" \\
+  -H "x-model-provider: openai" \\
   -d '{
-    "prompt": "Summarize this article about AI ethics",
-    "context": "Article text goes here...",
-    "options": {
-      "max_length": 200
-    }
+    "model": "gpt-4o-mini",
+    "input": "Tell me a joke"
   }'`
 };
 
@@ -62,7 +53,7 @@ const Integration = () => {
             </h2>
             
             <p className="text-gray-600 mb-6">
-              Integrate OpenResponses into your existing applications with just a few lines of code. Our SDKs are available for multiple programming languages and platforms.
+              Integrate OpenResponses into your existing applications with just a few lines of code. 100% compliant with OpenAI Responses API specifications. Can be used with OpenAI SDK or OpenAI Agent SDK.
             </p>
             
             <div className="mb-8">
@@ -71,8 +62,8 @@ const Integration = () => {
                   <span className="font-semibold text-mosaic-primary">1</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Install the SDK</h3>
-                  <p className="text-sm text-gray-600">Add our package via npm, pip, or other package managers</p>
+                  <h3 className="font-semibold">Use Existing OpenAI SDKs</h3>
+                  <p className="text-sm text-gray-600">No need for custom libraries - use the standard OpenAI SDK</p>
                 </div>
               </div>
               
@@ -82,7 +73,7 @@ const Integration = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold">Configure the Client</h3>
-                  <p className="text-sm text-gray-600">Initialize with your API key and endpoint URL</p>
+                  <p className="text-sm text-gray-600">Just point to your OpenResponses endpoint URL</p>
                 </div>
               </div>
               
@@ -104,17 +95,17 @@ const Integration = () => {
           
           <div className="lg:w-1/2 animate-fade-in-right">
             <div className="bg-gray-900 rounded-xl p-4 shadow-xl">
-              <Tabs defaultValue="javascript">
+              <Tabs defaultValue="openai_sdk">
                 <TabsList className="mb-4 bg-gray-800 border-gray-700 w-full">
-                  <TabsTrigger value="javascript">JavaScript</TabsTrigger>
-                  <TabsTrigger value="python">Python</TabsTrigger>
+                  <TabsTrigger value="openai_sdk">OpenAI SDK</TabsTrigger>
+                  <TabsTrigger value="agent_sdk">Agent SDK</TabsTrigger>
                   <TabsTrigger value="curl">cURL</TabsTrigger>
                 </TabsList>
-                <TabsContent value="javascript">
-                  <pre className="code-block">{codeSnippets.javascript}</pre>
+                <TabsContent value="openai_sdk">
+                  <pre className="code-block">{codeSnippets.openai_sdk}</pre>
                 </TabsContent>
-                <TabsContent value="python">
-                  <pre className="code-block">{codeSnippets.python}</pre>
+                <TabsContent value="agent_sdk">
+                  <pre className="code-block">{codeSnippets.agent_sdk}</pre>
                 </TabsContent>
                 <TabsContent value="curl">
                   <pre className="code-block">{codeSnippets.curl}</pre>

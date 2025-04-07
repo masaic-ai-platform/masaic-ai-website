@@ -1,6 +1,4 @@
-
-import { Shield, Lock, Server, FileCheck } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Shield, FileCheck, Server } from "lucide-react";
 
 const SecurityFeature = ({ icon, title, description }) => {
   return (
@@ -38,12 +36,6 @@ const Security = () => {
               />
               
               <SecurityFeature 
-                icon={<Lock className="h-6 w-6 text-mosaic-primary" />}
-                title="End-to-End Encryption"
-                description="All communications are encrypted using industry-standard protocols to ensure data security."
-              />
-              
-              <SecurityFeature 
                 icon={<Server className="h-6 w-6 text-mosaic-primary" />}
                 title="Self-hosted Solution"
                 description="Deploy on your own infrastructure or private cloud environment with full control over your data."
@@ -52,14 +44,8 @@ const Security = () => {
               <SecurityFeature 
                 icon={<FileCheck className="h-6 w-6 text-mosaic-primary" />}
                 title="Compliance Ready"
-                description="Designed to help you meet GDPR, HIPAA, SOC 2, and other compliance requirements."
+                description="Built with enterprise compliance requirements in mind, supporting your organization's regulatory needs."
               />
-            </div>
-            
-            <div className="mt-8">
-              <Button className="bg-mosaic-primary hover:bg-mosaic-primary/90">
-                Learn More About Security
-              </Button>
             </div>
           </div>
           

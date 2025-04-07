@@ -1,18 +1,22 @@
-
 import { 
-  Server, Shield, Code, Dock, BarChart, Settings 
+  Server, Shield, Rocket, BarChart, Settings, Wrench, Box
 } from "lucide-react";
 
 const features = [
   {
+    icon: <Box className="h-8 w-8 text-white" />,
+    title: "Bring Your Own Model",
+    description: "Use any model of your choice - self-hosted or managed. Easily connect to your preferred AI models with full compatibility."
+  },
+  {
+    icon: <Wrench className="h-8 w-8 text-white" />,
+    title: "Bring Your Own Tool",
+    description: "Connect any internal API hook as a LLM tool. Your internal services automatically become built-in tools for your AI applications."
+  },
+  {
     icon: <Server className="h-8 w-8 text-white" />,
     title: "Self-hosted AI Platform",
     description: "Deploy and run our AI solution on your own infrastructure, maintaining full control over your data and complying with internal security policies."
-  },
-  {
-    icon: <Code className="h-8 w-8 text-white" />,
-    title: "Seamless Integration",
-    description: "Integrate with minimal code changes through our well-documented API. Plug into existing systems with minimal disruption."
   },
   {
     icon: <Shield className="h-8 w-8 text-white" />,
@@ -20,19 +24,14 @@ const features = [
     description: "Built with security and compliance in mind. Keep your data on your infrastructure and meet industry regulations."
   },
   {
-    icon: <Dock className="h-8 w-8 text-white" />,
-    title: "Quick Docker Deployment",
-    description: "Deploy within minutes using Docker. Streamlined installation process with comprehensive documentation."
-  },
-  {
     icon: <BarChart className="h-8 w-8 text-white" />,
     title: "Real-time Monitoring",
-    description: "Monitor usage, performance, and system health with comprehensive analytics dashboards."
+    description: "Out-of-the-box production grade Generative AI metrics including token usage, model latency, request volumes, and other critical metrics."
   },
   {
-    icon: <Settings className="h-8 w-8 text-white" />,
-    title: "Flexible Configuration",
-    description: "Customize and configure to meet your specific needs. Adapt to changing requirements with minimal effort."
+    icon: <Rocket className="h-8 w-8 text-white" />,
+    title: "Quick Docker Deployment",
+    description: "Deploy within minutes using Docker. Streamlined installation process with comprehensive documentation."
   }
 ];
 

@@ -1,6 +1,5 @@
-
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Server, Shield, Clock } from "lucide-react";
+import { ArrowRight, Server, Shield, Clock, Github, MessageCircle, MessagesSquare, AlertCircle } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -20,21 +19,39 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="gradient-text">Empowering seamless, secure,</span>
-            <br />and scalable AI integrations
+            <br />and scalable AI Agents Building
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Built piece by piece—OpenResponses provides an enterprise-grade, self-hosted AI platform that seamlessly integrates into your existing infrastructure.
+            Built like Mosaic art piece by piece—OpenResponses provides an enterprise-grade, self-hosted AI platform that seamlessly integrates into your existing infrastructure.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button size="lg" className="bg-mosaic-primary hover:bg-mosaic-primary/90 px-6 py-6">
-              Get Started Now
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-mosaic-primary text-mosaic-primary hover:text-mosaic-primary px-6 py-6">
-              Request a Demo
-            </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a href="https://openresponses.masaic.ai/" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-mosaic-primary hover:bg-mosaic-primary/90 px-6 py-6">
+                Get Started Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <a href="https://github.com/masaic-ai-platform/open-responses" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
+              <Github className="h-5 w-5" />
+              <span>GitHub</span>
+            </a>
+            <a href="https://discord.com/channels/1335132819260702723/1354795442004820068" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
+              <MessageCircle className="h-5 w-5" />
+              <span>Discord</span>
+            </a>
+            <a href="https://github.com/orgs/masaic-ai-platform/discussions" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
+              <MessagesSquare className="h-5 w-5" />
+              <span>Discussion Forum</span>
+            </a>
+            <a href="https://github.com/masaic-ai-platform/open-responses/issues" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
+              <AlertCircle className="h-5 w-5" />
+              <span>Report Issues</span>
+            </a>
           </div>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
