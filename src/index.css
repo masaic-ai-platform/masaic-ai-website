@@ -123,6 +123,10 @@
   }
   
   .code-block {
-    @apply font-mono text-xs sm:text-sm md:text-base rounded-lg p-3 sm:p-4 bg-black text-white overflow-x-auto whitespace-pre-wrap break-all sm:whitespace-pre sm:break-normal;
+    @apply font-mono text-xs sm:text-sm md:text-base rounded-lg p-3 sm:p-4 bg-black text-white overflow-x-auto;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
   }
 }

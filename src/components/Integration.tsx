@@ -5,7 +5,9 @@ const codeSnippets = {
   openai_sdk: `openai_client = OpenAI(
     base_url="http://localhost:8080/v1", 
     api_key="your_api_key", 
-    default_headers={'x-model-provider': 'openai'}
+    default_headers={
+        'x-model-provider': 'openai'
+    }
 )
 
 response = openai_client.responses.create(
@@ -18,16 +20,21 @@ print(response.text)`,
   agent_sdk: `client = AsyncOpenAI(
     base_url="http://localhost:8080/v1", 
     api_key="your_api_key", 
-    default_headers={'x-model-provider': 'openai'}
+    default_headers={
+        'x-model-provider': 'openai'
+    }
 )
 
 agent = Agent(
     name="Assistant",
     instructions="You are a humorous poet.",
-    model=OpenAIResponsesModel(model="gpt-4o-mini", openai_client=client)
+    model=OpenAIResponsesModel(
+        model="gpt-4o-mini", 
+        openai_client=client
+    )
 )
 
-response = await agent.run("Write a poem about coding")
+response = await agent.run("Write a poem")
 print(response)`,
 
   curl: `curl -X POST http://localhost:8080/v1/responses \\
@@ -98,22 +105,24 @@ const Integration = () => {
           </div>
           
           <div className="lg:w-1/2 w-full animate-fade-in-right">
-            <div className="bg-gray-900 rounded-xl p-4 shadow-xl overflow-hidden">
+            <div className="bg-gray-900 rounded-xl p-4 shadow-xl">
               <Tabs defaultValue="openai_sdk" className="w-full">
                 <TabsList className="mb-4 bg-gray-800 border-gray-700 w-full grid grid-cols-3">
                   <TabsTrigger value="openai_sdk" className="text-xs sm:text-sm">OpenAI SDK</TabsTrigger>
                   <TabsTrigger value="agent_sdk" className="text-xs sm:text-sm">Agent SDK</TabsTrigger>
                   <TabsTrigger value="curl" className="text-xs sm:text-sm">cURL</TabsTrigger>
                 </TabsList>
-                <TabsContent value="openai_sdk">
-                  <pre className="code-block text-xs sm:text-sm overflow-x-auto max-w-full">{codeSnippets.openai_sdk}</pre>
-                </TabsContent>
-                <TabsContent value="agent_sdk">
-                  <pre className="code-block text-xs sm:text-sm overflow-x-auto max-w-full">{codeSnippets.agent_sdk}</pre>
-                </TabsContent>
-                <TabsContent value="curl">
-                  <pre className="code-block text-xs sm:text-sm overflow-x-auto max-w-full">{codeSnippets.curl}</pre>
-                </TabsContent>
+                <div className="overflow-hidden">
+                  <TabsContent value="openai_sdk">
+                    <pre className="code-block text-xs sm:text-sm whitespace-pre-wrap break-words">{codeSnippets.openai_sdk}</pre>
+                  </TabsContent>
+                  <TabsContent value="agent_sdk">
+                    <pre className="code-block text-xs sm:text-sm whitespace-pre-wrap break-words">{codeSnippets.agent_sdk}</pre>
+                  </TabsContent>
+                  <TabsContent value="curl">
+                    <pre className="code-block text-xs sm:text-sm whitespace-pre-wrap break-words">{codeSnippets.curl}</pre>
+                  </TabsContent>
+                </div>
               </Tabs>
             </div>
           </div>
