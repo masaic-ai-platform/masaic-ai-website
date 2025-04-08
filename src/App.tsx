@@ -8,8 +8,8 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Get the base path from environment or use default for GitHub Pages
-const basePath = import.meta.env.BASE_URL || "/masaic-ai-website/";
+// Use root path for custom domain deployment
+const basePath = "/";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>

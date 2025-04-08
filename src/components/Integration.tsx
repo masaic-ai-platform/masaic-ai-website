@@ -97,22 +97,22 @@ const Integration = () => {
             </div>
           </div>
           
-          <div className="lg:w-1/2 animate-fade-in-right">
-            <div className="bg-gray-900 rounded-xl p-4 shadow-xl">
-              <Tabs defaultValue="openai_sdk">
-                <TabsList className="mb-4 bg-gray-800 border-gray-700 w-full">
-                  <TabsTrigger value="openai_sdk">OpenAI SDK</TabsTrigger>
-                  <TabsTrigger value="agent_sdk">Agent SDK</TabsTrigger>
-                  <TabsTrigger value="curl">cURL</TabsTrigger>
+          <div className="lg:w-1/2 w-full animate-fade-in-right">
+            <div className="bg-gray-900 rounded-xl p-4 shadow-xl overflow-hidden">
+              <Tabs defaultValue="openai_sdk" className="w-full">
+                <TabsList className="mb-4 bg-gray-800 border-gray-700 w-full grid grid-cols-3">
+                  <TabsTrigger value="openai_sdk" className="text-xs sm:text-sm">OpenAI SDK</TabsTrigger>
+                  <TabsTrigger value="agent_sdk" className="text-xs sm:text-sm">Agent SDK</TabsTrigger>
+                  <TabsTrigger value="curl" className="text-xs sm:text-sm">cURL</TabsTrigger>
                 </TabsList>
                 <TabsContent value="openai_sdk">
-                  <pre className="code-block">{codeSnippets.openai_sdk}</pre>
+                  <pre className="code-block text-xs sm:text-sm overflow-x-auto max-w-full">{codeSnippets.openai_sdk}</pre>
                 </TabsContent>
                 <TabsContent value="agent_sdk">
-                  <pre className="code-block">{codeSnippets.agent_sdk}</pre>
+                  <pre className="code-block text-xs sm:text-sm overflow-x-auto max-w-full">{codeSnippets.agent_sdk}</pre>
                 </TabsContent>
                 <TabsContent value="curl">
-                  <pre className="code-block">{codeSnippets.curl}</pre>
+                  <pre className="code-block text-xs sm:text-sm overflow-x-auto max-w-full">{codeSnippets.curl}</pre>
                 </TabsContent>
               </Tabs>
             </div>
