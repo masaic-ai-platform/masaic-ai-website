@@ -88,9 +88,13 @@ const Integration = () => {
               </div>
             </div>
             
-            <Button className="bg-mosaic-primary hover:bg-mosaic-primary/90">
-              View Documentation
-            </Button>
+            <div className="mt-6">
+              <a href="https://openresponses.masaic.ai/introduction" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-mosaic-primary hover:bg-mosaic-primary/90 text-white">
+                  View Documentation
+                </Button>
+              </a>
+            </div>
           </div>
           
           <div className="lg:w-1/2 animate-fade-in-right">
