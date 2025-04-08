@@ -53,9 +53,9 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mt-12">
           <div className="flex flex-col md:flex-row justify-center items-center">
             <div>
-              <p className="text-gray-400 text-sm">
+              <div className="text-center text-gray-500 text-sm">
                 © {currentYear} Masaic AI. All rights reserved.
-              </p>
+              </div>
             </div>
           </div>
         </div>

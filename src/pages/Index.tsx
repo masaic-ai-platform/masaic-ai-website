@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "OpenResponses - Self-Hosted AI Platform";
+    document.title = "Masaic AI Platform - Self-Hosted AI Platform";
   }, []);
 
   return (

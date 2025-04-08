@@ -1,5 +1,8 @@
 # Masaic AI Platform Website
 
+## Overview
+This is the official website for the Masaic AI Platform.
+
 ## Project info
 
 This is the official website for the Masaic AI Platform.

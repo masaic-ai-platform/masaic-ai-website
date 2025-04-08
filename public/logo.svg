@@ -1,19 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+<svg width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Box -->
+  <rect x="0" y="0" width="30" height="30" rx="4" fill="#222222"/>
+  
+  <!-- "OR" Text in Box -->
+  <text x="15" y="20" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">OR</text>
+  
+  <!-- OpenResponses Text -->
+  <text x="40" y="26" font-size="16" fill="#000000" class="logo-text">OpenResponses</text>
+  
   <style>
-    .logo-text { font-family: 'Arial', sans-serif; font-weight: bold; }
-    .logo-icon { fill: #000; }
-    @media (prefers-color-scheme: dark) {
-      .logo-icon { fill: #fff; }
+    .logo-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
     }
   </style>
-  
-  <!-- Logo Container -->
-  <g>
-    <!-- Logo Icon -->
-    <rect x="0" y="4" width="32" height="32" rx="4" class="logo-icon" />
-    <text x="16" y="26" font-size="16" text-anchor="middle" fill="#FFFFFF" class="logo-text">MA</text>
-    
-    <!-- Logo Text -->
-    <text x="40" y="26" font-size="16" fill="#000000" class="logo-text">Masaic AI Platform</text>
-  </g>
 </svg> 
