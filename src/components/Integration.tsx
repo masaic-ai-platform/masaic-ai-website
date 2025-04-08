@@ -23,7 +23,7 @@ print(response.text)`,
 
 agent = Agent(
     name="Assistant",
-    instructions="You are a humorous poet who can write funny poems of 4 lines.",
+    instructions="You are a humorous poet.",
     model=OpenAIResponsesModel(model="gpt-4o-mini", openai_client=client)
 )
 
