@@ -39,14 +39,17 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            <span className="gradient-text">Empowering seamless, secure,</span>
+            <span className="gradient-text">The Most Open </span>
             <br className="hidden sm:block" />
-            <span className="gradient-text sm:hidden">and scalable</span>
-            <span className="hidden sm:inline"> and scalable</span> AI Agents Building
+            <span className="gradient-text sm:hidden"></span>
+            <span className="hidden sm:inline"> AI Developer Platform</span>
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto">
-            Built like Mosaic art, piece by piece—Masaic AI Platform provides an enterprise-grade, self-hosted AI platform that seamlessly integrates into your existing infrastructure.
+          Built like mosaic art — piece by piece. <br />
+          Feature-for-feature with the best — the OpenAI Developer Platform.<br />
+          But truly open. Proudly self-hostable. Fully model-agnostic.<br />
+          Build AI apps Faster. Deploy anywhere. No limits.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
@@ -69,7 +72,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-mosaic-primary mr-2" />
-              <span className="text-xs sm:text-sm">Quick Deployment</span>
+              <span className="text-xs sm:text-sm">Full Compatibility with OpenAI Ecosystem</span>
             </div>
           </div>
         </div>

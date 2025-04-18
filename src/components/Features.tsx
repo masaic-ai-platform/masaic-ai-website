@@ -53,10 +53,13 @@ const Features = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Powerful Features for <span className="gradient-text">Enterprise AI</span>
+          Enterprise Grade AI Platform<br/><span className="gradient-text">Without the Lock-In</span>
           </h2>
           <p className="text-gray-600">
-            OpenResponses combines powerful capabilities with ease of use to help you deploy AI solutions with confidence.
+          If it works with OpenAI, it works with our OpenResponses Platform — instantly.<br />
+
+          Bring your models, agents (built in any framework), APIs, and tools. <br />
+          Take back control with a platform that's truly yours.
           </p>
         </div>
         

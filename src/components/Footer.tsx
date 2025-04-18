@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
             
             <p className="text-gray-400 mb-6">
-              Empowering seamless, secure, and scalable AI integrations—built piece by piece.
+            The Most Open AI Developer Platform.
             </p>
             
             <div className="flex space-x-4">
