@@ -49,7 +49,7 @@ const Hero = () => {
           Built like mosaic art — piece by piece. <br />
           Feature-for-feature with the best — the OpenAI Developer Platform.<br />
           But truly open. Proudly self-hostable. Fully model-agnostic.<br />
-          Build AI apps Faster. Deploy anywhere. No limits.
+          Build AI apps faster. Deploy anywhere. No limits.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
