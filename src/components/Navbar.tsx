@@ -17,9 +17,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed left-0 right-0 z-30 transition-all duration-300 ${
         hasScrolled ? "bg-white shadow-sm py-3" : "bg-transparent py-4 sm:py-5"
       }`}
+      style={{ top: 'var(--banner-height, 0)' }}
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
@@ -59,7 +60,7 @@ const Navbar = () => {
         className={`md:hidden bg-white fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
-        style={{ paddingTop: "env(safe-area-inset-top)" }}
+        style={{ paddingTop: "calc(env(safe-area-inset-top) + var(--banner-height, 0))" }}
       >
         <div className="flex justify-end p-4">
           <button
