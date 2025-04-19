@@ -6,6 +6,7 @@ import Integration from "@/components/Integration";
 import Security from "@/components/Security";
 import Philosophy from "@/components/Philosophy";
 import Footer from "@/components/Footer";
+import PromotionalBanner from "@/components/PromotionalBanner";
 
 const Index = () => {
   useEffect(() => {
@@ -14,8 +15,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <PromotionalBanner />
       <Navbar />
-      <main>
+      <main style={{ paddingTop: "calc(64px + var(--banner-height, 0px))" }}>
         <Hero />
         <Features />
         <Integration />

@@ -3,7 +3,7 @@ import { ArrowRight, Server, Shield, Clock } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="pt-24 md:pt-32 pb-16 relative overflow-hidden">
+    <section className="pt-8 md:pt-10 pb-16 relative overflow-hidden">
       {/* Mosaic background pattern */}
       <div className="absolute inset-0 -z-10 mosaic-pattern opacity-20"></div>
       
@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
       
       {/* New Launch Banner */}
-      <div className="flex justify-center mt-[-4px] sm:mt-[-15px] mb-6 sm:mb-10 px-2">
+      <div className="flex justify-center mt-2 sm:mt-4 mb-6 sm:mb-10 px-2">
         <div className="flex overflow-hidden rounded-full shadow-sm max-w-full">
           <div className="flex items-center h-9 bg-mosaic-primary px-3 sm:px-5 text-white text-xs font-semibold whitespace-nowrap rounded-l-full">
             New Launch
