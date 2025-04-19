@@ -61,7 +61,7 @@ const PromotionalBanner = () => {
           <p className="font-medium tracking-tight text-sm sm:text-base truncate pr-1">
             <span className="hidden sm:inline mr-1">⚡</span>
             <span className="hidden sm:inline">
-              OpenAI Codex with your own models & MCP tools is here
+              Sovereign Codex with your own models & MCP tools is here
             </span>
             <span className="sm:hidden">
               Sovereign Codex is here

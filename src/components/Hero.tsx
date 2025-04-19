@@ -39,9 +39,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            <span className="gradient-text">The Most Open </span>
+            <span className="gradient-text">The Most Open</span>
             <br className="hidden sm:block" />
-            <span className="gradient-text sm:hidden"></span>
+            <span className="gradient-text inline sm:hidden"> AI Developer Platform</span>
             <span className="hidden sm:inline"> AI Developer Platform</span>
           </h1>
           
